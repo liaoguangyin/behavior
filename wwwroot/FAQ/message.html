@@ -3,8 +3,114 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link rel="stylesheet" href="/css/font-awesome.css">
 </head>
 <body>
-
+    <h2>
+        <span class="fa-fa-id-bage"></span>个人资料
+    </h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="icon" />
+    </form>
+    <div>
+        <div>
+            <label>头像：（仅限jpg/peng/gif）</label>
+        </div>
+        <label>性别：</label>
+        <label><input type="radio" name="gender" value="male" />男</label>
+        <label><input type="radio" name="gender" value="female" />女</label>
+    </div>
+    <div>
+        <label>关键字：（*使用空格分隔）</label>
+    </div>
+    <div>
+        <span></span>编程开发语言
+        <span></span>tityj
+        <span></span>ytj
+    </div>
+    <div>
+        <label>生日：</label>
+    </div>
+    <div>
+        <select id="birthyear" class="foerm-control" data-val-number="字段 birthyear 必须是一个数字。" name="birthyear">
+            <option value=" ">----</option>
+            <option>2020</option>
+            <option>2019</option>
+            <option>2018</option>
+            <option>2017</option>
+            <option>2016</option>
+            <option>2015</option>
+            <option>2014</option>
+            <option>2013</option>
+            <option>2012</option>
+            <option selected="selected">2011</option>
+            <option>2010</option>
+            <option>2009</option>
+            <option>2008</option>
+            <option>2007</option>
+            <option>2006</option>
+        </select>
+        <span>年</span>
+        <select id="birthmonth" class="foerm-control" data-val-number="字段 birthmonth 必须是一个数字。" name="birthyear">
+            <option value=" ">----</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option selected="selected">10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+        <span>月</span>
+        <select id="constellation" class="form-control" name="constellation">
+            <option value="">---</option>
+            <option>双子座</option>
+            <option>金牛座</option>
+            <option>白羊座</option>
+            <option selected="selected">巨蟹座</option>
+            <option>狮子座</option>
+            <option>处女座</option>
+            <option>天秤座</option>
+            <option>天蝎座</option>
+            <option>射手座</option>
+            <option>摩羯座</option>
+            <option>水瓶座</option>
+            <option>双鱼座</option>
+        </select>
+        <span>星座</span>
+    </div>
+    <div>
+        <label>--1级--</label>
+        <select name="firstkeword">
+            <option>工具软件</option>
+            <option>操作系统</option>
+            <option>顾问咨询</option>
+        </select>
+        <label>--2级--</label>
+        <select name="firstkeword">
+            <option>111</option>
+            <option>222</option>
+            <option>333</option>
+        </select>
+        <input type="text" name="keyword" placeholder=" 自定义关键字" />
+    </div>
+    <div>
+        <label><strong>自我介绍：</strong></label>
+        <textarea cols="50" rows="10"></textarea> 
+    </div>
+    <button type="submit" value="submit">提交</button>
+    <aside>
+        <h3>说明</h3>
+        <ol>
+            <li>头像</li>
+            <li>图片</li>
+            <li>介绍</li>
+        </ol>
+    </aside>
 </body>
 </html>
