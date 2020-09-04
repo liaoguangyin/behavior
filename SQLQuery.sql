@@ -45,3 +45,28 @@ ALTER TABLE Student DROP COLUMN Score;
 --修改列
 ALTER TABLE Student
 ALTER COLUMN SCORE FLOAT NULL;
+
+--插入列 INSERT（插入）
+-- Student表现有两列：Name 和 age
+INSERT Student([Name], Age) VALUES(N'陈元',23);
+
+--查找列SELECT（查找）
+-- 只查出Name和Age两列的数据
+SELECT [Name], Age FROM Student 
+
+--改列UPDATE（改）
+-- 把Student的Age列上所有值改为18
+UPDATE Student SET Age = 18;
+--删除
+--两种方式删除表数据：
+
+--    DELETE
+
+    --删除Student表的所有行
+    DELETE Student 
+
+    --TRUNCATE
+
+    --注意有TABLE关键字
+    TRUNCATE TABLE Student 
+    --删除整张表
