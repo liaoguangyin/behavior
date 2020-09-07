@@ -15,3 +15,10 @@
 常用的运算符有哪些
 算术运算符有几种
 where字句有什么作用
+2020年9月6日
+数据类型约束有哪些几种常见的
+SQL自动编号newid,identit有什么区别
+identity相比较于guid优劣势是什么
+2020年9月7日
+你是怎么样理解DISTINCT
+ORDER和DISTINCT配合使用需要注意什么

@@ -22,7 +22,17 @@ CREATE TABLE [dbo].[student]
     [age] NCHAR(10) NULL, 
     [lsfemale] NCHAR(10) NULL 
 )
-
+create table [dbo].[problem]
+(
+[id] int not null primary key,
+[title] nchar null,
+[content] nchar null,
+[NeedRemoteHelp] nchar null,
+[Reward]nchar null,
+[PublishDateTime]nchar null,
+)
+TRUNCATE TABLE problem
+select * from student
 --强行删除数据库
 use master;
 drop database[17bang];
@@ -41,6 +51,8 @@ ALTER TABLE Student ADD Score DECIMAL(3,1);
 
 --删除列
 ALTER TABLE Student DROP COLUMN Score;
+
+select *from  student --查看表单数据
 
 --修改列
 ALTER TABLE Student
@@ -70,3 +82,9 @@ UPDATE Student SET Age = 18;
     --注意有TABLE关键字
     TRUNCATE TABLE Student 
     --删除整张表
+
+    --事务机制
+    --begin transaction （transaction可以只写前面4位）
+    --rollback（回滚）
+
+    --if如果。 not取反，非。 and 且。or 或。not>and>or 从高到低
