@@ -22,17 +22,52 @@ CREATE TABLE [dbo].[student]
     [age] NCHAR(10) NULL, 
     [lsfemale] NCHAR(10) NULL 
 )
-create table [dbo].[problem]
+create table [keyword]
 (
-[id] int not null primary key,
-[title] nchar null,
-[content] nchar null,
-[NeedRemoteHelp] nchar null,
-[Reward]nchar null,
-[PublishDateTime]nchar null,
+  [id] int not null primary key,
+  [name] NCHAR(10) NULL,
+  [used] NCHAR(10) NULL,
 )
+insert keyword( [id],[Name],usde) values(1,N'小明',23);
+
+alter table keyword
+alter column [id] nvarchar(100) null
+
+ALTER TABLE Student ADD Score DECIMAL(3,1);
+select *from keyword 
+--create table [dbo].[problem]
+--(
+--[id] int not null primary key,
+--[title] nvarchar(500) null,
+--[content] text null,
+--[NeedRemoteHelp] bit null,
+--[Reward]int null,
+--[PublishDateTime]datetime null,
+--)
+--update problem set title=N'【推荐】'+title
+-- where Reward >10 
+
+-- update problem set title+=N'【加急】'+title
+-- where PublishDateTime >2019/10/10
+
+-- delete problem where title like N'%【%】%'
+
+-- select *from problem
+-- where title not like N'_____%数据库%' and title like N'%#%%' exists '#'
+
+
+--修改表结构
+--alter table problem
+--alter column [title] nvarchar(100) null
+
+--查询表单
+select *from problem
+--where查询
+select * from problem 
+where id<5
+
 TRUNCATE TABLE problem
-select * from student
+--select * from student
 --强行删除数据库
 use master;
 drop database[17bang];
@@ -81,6 +116,7 @@ UPDATE Student SET Age = 18;
 
     --注意有TABLE关键字
     TRUNCATE TABLE Student 
+
     --删除整张表
 
     --事务机制
