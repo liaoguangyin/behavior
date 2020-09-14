@@ -67,30 +67,34 @@
 --    --alter table keyword
 --    alter column [name] nvarchar(100) null
 
-
-    在Problem中插入不同作者（Author）不同悬赏（Reward）的若干条数据，以便能完成以下操作：
-        查找出Author为“飞哥”的、Reward最多的3条求助
-        所有求助，先按作者“分组”，然后在“分组”中按悬赏从大到小排序
-        查找并统计出每个作者的：求助数量、悬赏总金额和平均值
-        找出平均悬赏值少于10的作者并按平均值从小到大排序
-    以Problem中的数据为基础，使用SELECT INTO，新建一个Author和Reward都没有NULL值的新表：NewProblem （把原Problem里Author或Reward为NULL值的数据删掉）
-    使用INSERT SELECT, 将Problem中Reward为NULL的行再次插入到NewProblem中
-
-select *from problem
-alter table boss
+    
+--alter table boss
 --add score int 
-drop table problem
-alter table problem
-update problem set author=N'叶飞' where id=6
-insert problem (author,reward) values ( N'宋',200 )
+--alter table problem
+--update problem set author=N'叶飞' where id=6
+--insert problem (author,reward) values ( N'宋',200 )
 
-select top 3   author,reward 
-from problem  
-where author=N'叶飞'
-order by reward desc
+--select top 3   author,reward 
+--from problem  
+--where author=N'叶飞'
+--order by reward desc
 
-select author, reward
-from problem
-order by author, reward desc
+--select author, reward
+--from problem
+--order by author, reward desc
 
-select 
+--select author,count(title),sum(reward),avg(reward) from problem group by author
+
+--select author,avg(reward) from problem group by author having avg(reward)<10 order by avg(reward) asc
+
+--以Problem中的数据为基础，使用SELECT INTO，新建一个Author和Reward都没有NULL值的新表：NewProblem （把原Problem里Author或Reward为NULL值的数据删掉）
+--    使用INSERT SELECT, 将Problem中Reward为NULL的行再次插入到NewProblem中
+
+    select *from NewProblem
+    drop table NewProblem
+select author,reward
+into NewProblem
+from problem where id>5
+
+insert NewProblem 
+select reward from problem 
