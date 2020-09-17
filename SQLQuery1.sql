@@ -90,11 +90,25 @@
 --以Problem中的数据为基础，使用SELECT INTO，新建一个Author和Reward都没有NULL值的新表：NewProblem （把原Problem里Author或Reward为NULL值的数据删掉）
 --    使用INSERT SELECT, 将Problem中Reward为NULL的行再次插入到NewProblem中
 
-    select *from NewProblem
-    drop table NewProblem
-select author,reward
-into NewProblem
-from problem where id>5
+--    select *from NewProblem
+--    drop table [user]
+--select author,reward
+--into NewProblem
+--from problem where id>5
 
-insert NewProblem 
-select reward from problem 
+--insert NewProblem 
+--select reward from problem 
+--alter table profile add teacherid int
+create table profile
+(
+[id] int primary key identity,
+[name] NVARCHAR(10) ,
+[teacher] NVARCHAR(10) ,
+)
+create table [user]
+(
+[id] int primary key ,
+[name]NVARCHAR(10),
+[teacherid] int foreign key references profile(id),
+)
+ 
