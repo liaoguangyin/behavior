@@ -186,6 +186,45 @@
 --group by keywordid
 
 
+--create table tscore
+--(
+--[name] nvarchar(20),
+--[subject] nvarchar(20),
+--score int
+--)
 
+--insert tscore values(N'飞哥','SQL',98)
+--insert tscore values(N'飞哥','C#',89)
+--insert tscore values(N'飞哥','javascript',76)
+--insert tscore values(N'路炜','SQL',87)
+--insert tscore values(N'路炜','C#',95)
+--insert tscore values(N'路炜','javascript',88)
 
+--select 
+--[name],
+--max(case [subject] when N'C#'then score else 0 end) as N'C#',
+--max(case[subject] when N'SQL'then score else 0 end) as N'SQL',
+--max(case[subject] when N'javascript' then score else 0 end)as N'javascript'
+--from tscore
+--group by [name] 
 
+ --为求助添加一个发布时间（TPublishTime），使用子查询：
+
+ --   删除每个作者悬赏最低的求助
+  begin transaction
+  delete problem where reward in (select  min(reward)from problem group by author) 
+  rollback
+  select * from problem 
+ --   找到从未成为邀请人的用户
+ select * from problem where Invitepeople is NULL
+ --   如果一篇求助的关键字大于3个，将它的悬赏值翻倍
+
+ --   查出所有发布一篇以上（不含一篇）文章的用户信息
+ --   查找每个作者最近发布的一篇文章
+ --   查出每一篇求助的悬赏都大于5个帮帮币的作者
+ Keyword
+alter table problem add Keyword nvarchar(20);
+insert problem(author)values (N'飞哥')
+update problem set author=N'大飞'
+where  id=7
+delete from problem where id=8
