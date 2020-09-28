@@ -211,38 +211,64 @@
  --为求助添加一个发布时间（TPublishTime），使用子查询：
 
  --   删除每个作者悬赏最低的求助
-  begin transaction
-  delete problem where reward in (select  min(reward)from problem group by author) 
-  begin transaction
-  delete problem 
-  from problem pr
-  where reward=(
-  select min(reward)from problem po
-  where pr.author=po.author
-  group by author
-  )
-rollback
-  select * from problem 
- --   找到从未成为邀请人的用户
- select * from problem where id not in(
- select invitedby from problem 
- where invitedby is not null
- )
+--  begin transaction
+--  delete problem where reward in (select  min(reward)from problem group by author) 
+--  begin transaction
+--  delete problem 
+--  from problem pr
+--  where reward=(
+--  select min(reward)from problem po
+--  where pr.author=po.author
+--  group by author
+--  )
+--rollback
+--  select * from problem 
+-- --   找到从未成为邀请人的用户
+-- select * from problem where id not in(
+-- select invitedby from problem 
+-- where invitedby is not null
+ --)
  --   如果一篇求助的关键字大于3个，将它的悬赏值翻倍
- select * from 
+
  --   查出所有发布一篇以上（不含一篇）文章的用户信息
  --   查找每个作者最近发布的一篇文章
  --   查出每一篇求助的悬赏都大于5个帮帮币的作者
- Keyword
-alter table problem add invitedby nvarchar(20);
-insert problem(author)values (N'飞哥')
-update problem set author=N'大飞'
-where  id=7
-delete from problem where id=8
+-- Keyword
+--alter table problem add invitedby nvarchar(20);
+--insert problem(author)values (N'飞哥')
+--update problem set author=N'大飞'
+--where  id=7
+--delete from problem where id=8
 
-分别使用派生表和CTE，查询求助表（表中只有一列整体的发布时间，没有年月的列），以获得：
-一起帮每月各发布了求助多少篇
- 
-每月发布的求助中，悬赏最多的3篇
-每个作者，每月发布的，悬赏最多的3篇
-分别按发布时间和悬赏数量进行分页查询的结果
+--分别使用派生表和CTE，查询求助表（表中只有一列整体的发布时间，没有年月的列），以获得：
+--一起帮每月各发布了求助多少篇
+ --select YEAR ,MONTH,COUNT(*)from
+ --(
+ --select 
+ --MONTH(PublishDateTime) AS [MONTH],
+ --YEAR(PublishDateTime) AS[YEAR]
+ --from problem 
+ --)ymp
+ --group by ymp.YEAR,YMP.MONTH
+ --with ymp 
+ --AS 
+ --(
+ --  select
+ --  MONTH(PublishDateTime) AS [MONTH],
+ --  YEAR(PublishDateTime) AS [YEAR]
+ --  from problem 
+ -- )
+ --select YEAR,MONTH,COUNT(*)from ymp
+ --group by ymp.[YEAR],ymp[MONTH]
+
+--每月发布的求助中，悬赏最多的3篇
+--SELECT * FROM (
+--    SELECT *,
+--      ROW_NUMBER()OVER(
+--      PARTITION BY YEAR(PublishDateTime),MONTH(PublishDateTime)
+--      ORDER BY Reward desc)gid
+--      from problem)ymp
+--where ymp.gid<=3     
+--每个作者，每月发布的，悬赏最多的3篇
+
+--分别按发布时间和悬赏数量进行分页查询的结果
