@@ -270,5 +270,58 @@
 --      from problem)ymp
 --where ymp.gid<=3     
 --每个作者，每月发布的，悬赏最多的3篇
-
+--select * from (
+--  select *,
+--  ROW_NUMBER ()over(
+--  partition by year(PublishDateTime),month(PublishDateTime),author
+--  order by reward desc)gid
+--  from problem) ymp
+--where ymp.gid<=3
 --分别按发布时间和悬赏数量进行分页查询的结果
+--select * from (
+--  select *,
+--  ROW_NUMBER ()over(
+--  partition by year(PublishDateTime),month(PublishDateTime)
+--  order by reward desc)gid
+--  from problem) ymp
+--where ymp.gid between 3 and 5
+--创建Response(Id, Content, AuthorId, ProblemId, CreateTime) 
+ 
+ --create table bangmoney(
+ --[name] nvarchar(25),
+ --balance int,
+ --[id] int identity
+ --)
+ --insert bangmoney values (N'汉', 500 )
+ --alter table problem 
+ --add constraint ck_problem_balance check(balance>=0)
+ --ALTER  TABLE PROBLEM
+ --ADD balance int
+
+-- begin try
+--          begin tran
+--          alter table problem 
+--          add constraint ck_problem_balance check(balance>=0)
+--          insert problem(title ,Reward,PublishDateTime,id2,author,balance ) values (N'夏',60,2020/8/7,8,N'大飞',1000)
+--          update problem  set balance-=60 where id2=8;
+--          commit
+-- end try
+--begin catch
+--   rollback;
+--   throw
+--end catch
+
+--select * from problem 
+--delete from problem where id=9
+
+
+
+declare @i int
+declare @n int
+set @n=8
+set @i=1
+while @i<@n
+begin
+print(Space((@n-@i)/2)+Replicate('1',@i))
+set @i=@i+2
+end
