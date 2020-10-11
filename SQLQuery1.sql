@@ -1,4 +1,4 @@
-﻿--运算符 keyword作业1-11
+﻿ --运算符 keyword作业1-11
 --create table [keyword]
 --(
 --  [id] int not null primary key,
@@ -316,12 +316,37 @@
 
 
 
-declare @i int
-declare @n int
-set @n=8
-set @i=1
-while @i<@n
-begin
-print(Space((@n-@i)/2)+Replicate('1',@i))
-set @i=@i+2
-end
+--declare @i int
+--declare @n int
+--set @n=8
+--set @i=1
+--while @i<@n
+--begin
+--print(Space((@n-@i)/2)+Replicate('1',@i))
+--set @i=@i+2
+--end
+
+    --定义一个函数GetBigger(INT a, INT b)，可以取a和b之间的更大的一个值
+     --create function GetBigger(@a int,@b int)
+     --returns int 
+     --as
+     --begin 
+     --     return (@a+@b)/2
+     --end
+     --print dbo.GetBigger(10,20)
+    --创建一个单行表值函数GetLatestPublish(INT n)，返回最近发布的n篇求助
+    --create function GetLatestPublish(@n int)
+    --returns table
+    --return select top (@n)* from problem order by PublishDateTime desc
+    --go
+    --select*from dbo.GetLatestPublish(6)
+
+    --创建一个多行表值函数GetByReward(INT n, BIT asc)，如果asc为1，返回悬赏最少的n位同学；否则，返回悬赏最多的n位同学。
+   
+    --在表TProblem中： 
+    --找出所有周末发布的求助（添加CreateTime列，如果还没有的话）
+
+    --找出每个作者所有求助悬赏的平均值，精确到小数点后两位
+    --select author,ROUND (avg(reward),2)from problem group by author 
+    --有一些标题以test、[test]后者Test-开头的求助，找到他们并把这些前缀都换成大写
+   
