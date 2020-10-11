@@ -7,12 +7,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string name;
-            name = null;
-            Console.WriteLine(Console.ReadLine());
-            int password;
-            password = 1;
-            Console.WriteLine(Console.ReadLine());
+            //string name;
+            //name = null;
+            //Console.WriteLine(Console.ReadLine());
+            //int password;
+            //password = 1;
+            //Console.WriteLine(Console.ReadLine());
+
+
+
         }
     }
 }
