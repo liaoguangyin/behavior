@@ -48,19 +48,19 @@ namespace ConsoleApp1
             //      按进栈时间装入一维数组，
             //      按座位装入二维数组，
             //    并输出共有多少名同学。
-            //string[] students ={ "刘伟-刘", "龚廷义-龚", "李智博-李", "周丁浩-周", "廖光银-廖" };
+            //string[] students = { "刘伟-刘", "龚廷义-龚", "李智博-李", "周丁浩-周", "廖光银-廖" };
             //Console.WriteLine(students.Length);
-            //string[,] student = new string[2,4];
-            //student[0,0]  = "刘伟-刘";
-            //student[0, 1] = "龚廷义-龚";
-            //student[0, 2] = "李智博-李";
-            //student[0, 3] = "周丁浩-周";
-            //student[0, 4] = "廖光银-廖";
-            //student[1, 0] = "第一位";
-            //student[1, 1] = "第二位";
-            //student[1, 2] = "第三位";
-            //student[1, 3] = "第四位";
-            //student[1, 4] = "第五位";
+            string[,] student = new string[2, 4];
+            student[0, 0] = "刘伟-刘";
+            student[0, 1] = "龚廷义-龚";
+            student[0, 2] = "李智博-李";
+            student[0, 3] = "周丁浩-周";
+            student[0, 4] = "廖光银-廖";
+            student[1, 0] = "第一位";
+            student[1, 1] = "第二位";
+            student[1, 2] = "第三位";
+            student[1, 3] = "第四位";
+            student[1, 4] = "第五位";
             //Console.WriteLine();
             //    作业：
             //         分别用for循环和while循环输出：1,2,3,4,5 和 1,3,5,7,9
@@ -75,13 +75,37 @@ namespace ConsoleApp1
             //    i++;
             //    Console.WriteLine(i);
             //}
-            int i = 0;
-            while (i < 10)
+            //int i = 0;
+            //while (i < 10)
+            //{
+            //    i++;
+            //    Console.WriteLine(i);
+            //    i = (i + 1);
+            //for (int i = 1; i < 6; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            //for (int i = 1; i<=5; i++)
+            //{
+            //    Console.WriteLine(i = 2 * i - 1);
+            //    i = i + 1;
+            //} 
+            //int sum = 0;
+            //for (int i = 1; i < 99; i++)
+            //{
+            //    i += 1;
+            //    sum += i;
+            //}
+            //Console.WriteLine(sum);
+            //for (int i = 0; i < students.Length; i++)
+            //{
+            //    Console.WriteLine(students[i]);
+            for (int i = 0; i < student.Length; i++)
             {
-                i++;
-                i = (i*2 - 1);
-                Console.WriteLine(i);
+                Console.WriteLine(student.Length);
             }
         }
+        }
+
     }
-}
+
