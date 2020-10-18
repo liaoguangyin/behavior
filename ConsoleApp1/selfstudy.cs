@@ -50,18 +50,15 @@ namespace ConsoleApp1
             //    并输出共有多少名同学。
             //string[] students = { "刘伟-刘", "龚廷义-龚", "李智博-李", "周丁浩-周", "廖光银-廖" };
             //Console.WriteLine(students.Length);
-            string[,] student = new string[2, 4];
-            student[0, 0] = "刘伟-刘";
-            student[0, 1] = "龚廷义-龚";
-            student[0, 2] = "李智博-李";
-            student[0, 3] = "周丁浩-周";
-            student[0, 4] = "廖光银-廖";
-            student[1, 0] = "第一位";
-            student[1, 1] = "第二位";
-            student[1, 2] = "第三位";
-            student[1, 3] = "第四位";
-            student[1, 4] = "第五位";
-            //Console.WriteLine();
+
+
+            //string[,] student = new string[4,2 ];
+            //student[1, 0] = "刘伟-刘";
+            //student[2, 0] = "龚廷义-龚";
+            //student[0, 1] = "李智博-李";
+            //student[1, 1] = "周丁浩-周";
+            //student[2, 1] = "廖光银-廖";
+            //Console.WriteLine(student.Length);
             //    作业：
             //         分别用for循环和while循环输出：1,2,3,4,5 和 1,3,5,7,9
             //         用for循环输出存储在一维 / 二维数组里的源栈所有同学姓名 / 昵称
@@ -90,6 +87,9 @@ namespace ConsoleApp1
             //    Console.WriteLine(i = 2 * i - 1);
             //    i = i + 1;
             //} 
+
+
+
             //int sum = 0;
             //for (int i = 1; i < 99; i++)
             //{
@@ -97,15 +97,42 @@ namespace ConsoleApp1
             //    sum += i;
             //}
             //Console.WriteLine(sum);
+
+
+
             //for (int i = 0; i < students.Length; i++)
             //{
             //    Console.WriteLine(students[i]);
-            for (int i = 0; i < student.Length; i++)
-            {
-                Console.WriteLine(student.Length);
-            }
+            //for (int i = 0; i < student.Length; i++)
+            //{
+            //    Console.WriteLine(student);
+            //}
+
+
+
+
+            //double[] score = { 80, 70, 60, 88, 90, 95 };
+            //double max = score[0];
+            //for (int i = 0; i < score.Length; i++)
+            //{
+            //    if (score[i]>max)
+            //    {
+            //        max = score[i];
+            //    }
+
+            //}
+            //Console.WriteLine(max);
+            //double min = score[0];
+            //for (int i = 0; i < score.Length; i++)
+            //{
+            //    if (score[i]<min)
+            //    {
+            //        min = score[i];
+            //    }
+            //}
+            //Console.WriteLine(min);
         }
-        }
+        
 
     }
-
+}
