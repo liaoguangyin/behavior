@@ -52,7 +52,7 @@ namespace ConsoleApp1
             //Console.WriteLine(students.Length);
 
 
-            //string[,] student = new string[4,2 ];
+            //string[,] student = new string[4, 2];
             //student[1, 0] = "刘伟-刘";
             //student[2, 0] = "龚廷义-龚";
             //student[0, 1] = "李智博-李";
@@ -103,12 +103,19 @@ namespace ConsoleApp1
             //for (int i = 0; i < students.Length; i++)
             //{
             //    Console.WriteLine(students[i]);
-            //for (int i = 0; i < student.Length; i++)
-            //{
-            //    Console.WriteLine(student);
             //}
 
+            //for (int t = 0; t < student.Rank; t++)
+            //{
+            //    for (int i = 0; i < student.GetLength(t); i++)
+            //    {
+            //        for (int y = 0; y < student.GetLength(t+1); y++)
+            //        {
+            //            Console.WriteLine(student[i,y]);
+            //        }
 
+            //    }
+            //}
 
 
             //double[] score = { 80, 70, 60, 88, 90, 95 };
@@ -119,9 +126,10 @@ namespace ConsoleApp1
             //    {
             //        max = score[i];
             //    }
-
             //}
             //Console.WriteLine(max);
+
+
             //double min = score[0];
             //for (int i = 0; i < score.Length; i++)
             //{
@@ -131,7 +139,27 @@ namespace ConsoleApp1
             //    }
             //}
             //Console.WriteLine(min);
+            //}
+
+
+
+            for (int i = 2; i <=100; i++)
+            {
+                for (int t = 2; t < i; t++)
+                {
+                    if (i%t==0)
+                    {
+                        break;
+                    }
+                    else if (i-1==t)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+            }
+       
         }
+
         
 
     }
