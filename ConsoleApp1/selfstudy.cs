@@ -164,28 +164,43 @@ namespace ConsoleApp1
 
 
 
-            int[] score = new int[10];
-            int a;
-            Random
+            //int[] score = new int[10];
+            //Random random = new Random();
+            //score[0] = random.Next(5);
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    score[i + 1] = random.Next() + score[i];
+            //}
 
-            for (int i = 1; i < score.Length; i++)
+            //for (int i = 0; i < 9; i++)
+            //{
+            //    for (int j =  i+1;j<10; j++)
+            //    {
+
+
+            //        if (score[j] < score[i])
+            //        {
+            //            int temp = score[i];
+            //            score[i] = score[j ];
+            //            score[j ] = temp;
+            //        }
+            //    }
+            //}
+
+            //for (int i = 0; i < score.Length; i++)
+            //{
+            //    Console.WriteLine(score[i]);
+            //}
+
+
+
+            int[,] add = new int[3, 4];
+            for (int i = 0; i < add.GetLength(0); i++)
             {
-                for (int j = 0; j < score.Length - 1; j++)
+                for (int j = 0; j < add.GetLength(1); j++)
                 {
-
-
-                    if (score[j] > score[j + 1])
-                    {
-                        int temp = score[j];
-                        score[j] = score[j + 1];
-                        score[j + 1] = temp;
-                    }
+                    Console.Write(i + j+" ");
                 }
-            }
-
-            for (int i = 0; i < score.Length; i++)
-            {
-                Console.WriteLine(score[i]);
             }
 
         }
