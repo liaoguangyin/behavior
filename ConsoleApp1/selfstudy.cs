@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Dynamic;
+using System.Globalization;
 
 namespace ConsoleApp1
 {
@@ -66,6 +67,7 @@ namespace ConsoleApp1
             //         将源栈同学的成绩存入一个double数组中，用循环找到最高分和最低分
             //         找到100以内的所有质数（只能被1和它自己整除的数）
             //         生成一个元素（值随机）从小到大排列的数组
+            //         设立并显示一个多维数组的值，元素值等于下标之和。Console.Write()
             //int i = 0;
             //while (i < 6)
             //{
@@ -143,24 +145,52 @@ namespace ConsoleApp1
 
 
 
-            for (int i = 2; i <=100; i++)
+            //for (int i = 2; i <=100; i++)
+            //{
+            //    for (int t = 2; t < i; t++)
+            //    {
+            //        if (i%t==0)
+            //        {
+            //            break;
+            //        }
+            //        else if (i-1==t)
+            //        {
+            //            Console.WriteLine(i);
+            //        }
+            //    }
+            //}
+
+
+
+
+
+            int[] score = new int[10];
+            int a;
+            Random
+
+            for (int i = 1; i < score.Length; i++)
             {
-                for (int t = 2; t < i; t++)
+                for (int j = 0; j < score.Length - 1; j++)
                 {
-                    if (i%t==0)
+
+
+                    if (score[j] > score[j + 1])
                     {
-                        break;
-                    }
-                    else if (i-1==t)
-                    {
-                        Console.WriteLine(i);
+                        int temp = score[j];
+                        score[j] = score[j + 1];
+                        score[j + 1] = temp;
                     }
                 }
             }
-       
+
+            for (int i = 0; i < score.Length; i++)
+            {
+                Console.WriteLine(score[i]);
+            }
+
         }
 
-        
 
     }
+    
 }
