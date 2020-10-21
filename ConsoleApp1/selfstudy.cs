@@ -6,8 +6,8 @@ namespace ConsoleApp1
 {
     class Selfstudy
     {
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        //{
             //作业
             //观察一起帮登录页面，用if...else ...完成以下功能。
             //用户依次由控制台输入：验证码、用户名和密码：
@@ -194,18 +194,126 @@ namespace ConsoleApp1
 
 
 
-            int[,] add = new int[3, 4];
-            for (int i = 0; i < add.GetLength(0); i++)
-            {
-                for (int j = 0; j < add.GetLength(1); j++)
-                {
-                    Console.Write(i + j+" ");
-                }
-            }
+            //int[,] add = new int[3, 4];
+            //for (int i = 0; i < add.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < add.GetLength(1); j++)
+            //    {
+            //        Console.Write(i + j+" ");
+            //    }
+            //}
+        //}
+        //作业
+        //   将之前作业封装成方法（自行思考参数和返回值），并调用执行。且以后作业，如无特别声明，皆需使用方法封装。
+        //   计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
+        //   完成“猜数字”游戏，方法名GuessMe()：
+        //   随机生成一个大于0小于1000的整数
+        //     用户输入一个猜测值，系统进行判断，告知用户猜测的数是“大了”，还是“小了”
+        //      没猜中可以继续猜，但最多不能超过10次
+        //        如果5次之内猜中，输出：你真牛逼！
+        //        如果8次之内猜中，输出：不错嘛！
+        //        10次还没猜中，输出：(～￣(OO)￣)ブ
 
-        }
+        //static double GetAverage(double[] score)
+        //{
+        //    double sum = 0;
+        //    for (int i = 0; i < score.Length; i++)
+        //    {
+        //        sum = sum + score[i];
+        //    }
+        //    double average = sum / score.Length;
+        //    return average;
+        //}
 
+        //static void GuessMe()
+        //{
+        //    int num = new Random().Next(1000);
+        //    Console.WriteLine("随机数是：" + num);
+        //    for (int i = 1; i < 11; i++)
+        //    {
+        //        int input = Convert.ToInt32(Console.ReadLine());
+        //        if (input != num)
+        //        {
+        //            if (i == 10)
+        //            {
+        //                Console.WriteLine("(～￣(OO)￣)ブ");
+        //                return;
+        //            }
+        //            if (input > num)
+        //            {
+        //                Console.WriteLine($"太大了！还剩{10 - i}次");
+        //                continue;
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine($"太小了！还剩{10 - i}次");
+        //                continue;
+        //            }
+        //            {
+
+        //            }
+        //        }
+        //        else
+        //        {
+        //            string congratulation = "";
+        //            if (i >= 5)
+        //            {
+        //                congratulation = "你真牛逼";
+        //            }
+        //            else if (i <= 8);
+        //            { 
+        //                Console.WriteLine("不错啊");
+        //            }
+        //            else
+        //            { 
+        //                Console.WriteLine("失败");
+        //            }
+        //            Console.WriteLine(congratulation);
+        //            break;
+        //        }
+        //    }
+        //}
+
+
+
+
+        //作业
+        //     利用ref调用Swap()方法交换两个同学的床位号
+        //     将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
+        //       true / false，表示登陆是否成功
+        //       string，表示登陆失败的原因
+
+        //static void Swap(ref int Bednumber1, ref int Bednumber2)
+        //{
+        //    int temp = Bednumber1;
+        //    Bednumber1 = Bednumber2;
+        //    Bednumber2 = temp;
+
+        //    if (LogOn("廖", "4567", out string reason))
+        //    {
+        //        Console.WriteLine("");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("");
+        //    }
+
+        //}
+        //static bool LogOn(string username, string password, out string reason)
+        //{
+        //    reason = "";
+        //    return true;
+
+        //}
+        //作业 
+        //    1 定义一个生成数组的方法：int[] GetArray()，其元素随机生成从小到大排列。利用可选参数控制：
+        //    2 最小值min（默认为1）
+        //      相邻两个元素之间的最大差值gap（默认为5）
+        //      元素个数length（默认为10个）
+        //    3 实现二分查找，方法名BinarySeek(int[] numbers, int target)：
+        //        传入一个有序（从大到小/从小到大）数组和数组中要查找的元素
+        //        如果找到，返回该元素所在的下标；否则，返回-1
 
     }
-    
+
 }
