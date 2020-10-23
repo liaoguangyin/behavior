@@ -313,18 +313,41 @@ namespace ConsoleApp1
         //    3 实现二分查找，方法名BinarySeek(int[] numbers, int target)：
         //        传入一个有序（从大到小/从小到大）数组和数组中要查找的元素
         //        如果找到，返回该元素所在的下标；否则，返回-1
-        internal static[] GetArray(int min = 1, gap= 5, int length = 10)
+        //internal static[] GetArray(int min = 1, gap= 5, int length = 10)
+        //{
+        //    Random random = new Random();
+        //    int[] arr = new int[length];
+        //    arr[0] = min;
+        //    Console.WriteLine(arr[0]);
+        //    for (int i = 1; i < length; i++)
+        //    {
+        //        arr[i] = arr[i - 1] + random.Next(gap);
+        //        Console.WriteLine(arr[i] + "，");
+        //    }
+        //    return arr;
+        //}
+
+
+        static int BinarySeek(int[] numbers, int target) 
         {
-            Random random = new Random();
-            int[] arr = new int[length];
-            arr[0] = min;
-            Console.WriteLine(arr[0]);
-            for (int i = 1; i < length; i++)
+            int left = 0, right = numbers.Length - 1;
+            while (left<right)
             {
-                arr[i] = arr[i - 1] + random.Next(gap);
-                Console.WriteLine(arr[i] + "，");
+                int middle = (left + right) / 2;
+                if (target==numbers[middle])
+                {
+                    return middle;
+                }
+                else if (target>numbers[middle])
+                {
+                    left = middle + 1;
+                }
+                else if (target<numbers[middle])
+                {
+                    right = middle - 1;
+                }                
             }
-            return arr;
+            return -1;
         }
     }
     
