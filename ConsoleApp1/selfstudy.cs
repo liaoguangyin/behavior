@@ -328,27 +328,27 @@ namespace ConsoleApp1
         //}
 
 
-        static int BinarySeek(int[] numbers, int target) 
-        {
-            int left = 0, right = numbers.Length - 1;
-            while (left<right)
-            {
-                int middle = (left + right) / 2;
-                if (target==numbers[middle])
-                {
-                    return middle;
-                }
-                else if (target>numbers[middle])
-                {
-                    left = middle + 1;
-                }
-                else if (target<numbers[middle])
-                {
-                    right = middle - 1;
-                }                
-            }
-            return -1;
-        }
+        //static int BinarySeek(int[] numbers, int target) 
+        //{
+        //    int left = 0, right = numbers.Length - 1;
+        //    while (left<right)
+        //    {
+        //        int middle = (left + right) / 2;
+        //        if (target==numbers[middle])
+        //        {
+        //            return middle;
+        //        }
+        //        else if (target>numbers[middle])
+        //        {
+        //            left = middle + 1;
+        //        }
+        //        else if (target<numbers[middle])
+        //        {
+        //            right = middle - 1;
+        //        }                
+        //    }
+        //    return -1;
+        //}
     }
     
 }
