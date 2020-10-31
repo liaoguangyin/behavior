@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "selfstudy", "ConsoleApp1\selfstudy.csproj", "{08A45FC0-FC03-4FCD-A37F-67E469FFB199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csharp", "ConsoleApp1\csharp.csproj", "{08A45FC0-FC03-4FCD-A37F-67E469FFB199}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "behavior", "RazorPage\behavior.csproj", "{1DB490FD-50EE-44B5-A972-42F682935F5D}"
 EndProject

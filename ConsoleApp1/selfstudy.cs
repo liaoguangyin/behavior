@@ -2,9 +2,9 @@
 using System.Dynamic;
 using System.Globalization;
 
-namespace ConsoleApp1
+namespace csharp
 {
-    class Selfstudy
+    class csharp
     {
         //static void Main(string[] args)
         //{
