@@ -7,7 +7,8 @@ namespace selfstudy
     //观察“一起帮”的：
 
     //注册/登录功能，定义一个User类，包含字段：Name（用户名）、Password（密码）和 邀请人（InvitedBy），和方法：Register()、Login()
-    class user
+    //让User类无法被继承
+    public /*static*/ class user
     {
         private string _Name;
         private user()
