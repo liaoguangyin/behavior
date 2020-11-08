@@ -8,6 +8,6 @@ namespace csharp
     //试一试，Suggest能有Id属性么？
     public class Entity
     {
-        public int Id { get; set; }
+        public int Id { get; }
     }
 }

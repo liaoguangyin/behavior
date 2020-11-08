@@ -17,6 +17,12 @@ namespace CSharplearn
         //但只读属性PublishTime使用它为外部提供内容的发布时间
 
         private DateTime createTime;
+
+        internal void Release()
+        {
+            throw new NotImplementedException();
+        }
+
         public DateTime Publishtime => createTime;
         //其他方法和属性请自行考虑，尽量贴近一起帮的功能实现。
         private string Title { get; set; }

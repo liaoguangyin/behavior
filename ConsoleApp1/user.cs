@@ -8,13 +8,14 @@ namespace selfstudy
 
     //注册/登录功能，定义一个User类，包含字段：Name（用户名）、Password（密码）和 邀请人（InvitedBy），和方法：Register()、Login()
     //让User类无法被继承
-    public /*static*/ class user
+
+    public sealed class User
     {
         private string _Name;
-        private user()
+        private User()
         {
         }
-        public user(string name, string password)
+        public User(string name, string password)
         {
             _Name = name;
             _password = password;
@@ -38,13 +39,13 @@ namespace selfstudy
             }
         }
         private string _password;
-        public string password
+        public string Password
         {
             set;
             private get;
         }
 
-        public user _invitedBy { get; set; }
+        public User _invitedBy { get; set; }
         public string _inviteCode { get; set; }
         public string AuthCode { get; set; }
     }
