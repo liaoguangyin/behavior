@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace csharp
 {
-    class csharp
+    class Csharp
     {
         //static void Main(string[] args)
         //{
@@ -349,6 +349,11 @@ namespace csharp
         //    }
         //    return -1;
         //}
+        //单例调用
+        private static void Main(string[]ages)
+        {
+            FactoryContext context = FactoryContext.GetInstance();
+        }
     }
     
 }

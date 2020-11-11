@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace csharp
 {
-    class ISendMessahe
+    class ISendMessage
     {
-        void Send();
+        //private void Send();
     }
 }

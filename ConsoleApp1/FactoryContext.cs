@@ -7,11 +7,14 @@ namespace csharp
     //    （提示：设计模式之单例）
     class FactoryContext
     {
-        private readonly static FactoryContext context = new FactoryContext();
-        private static FactoryContext _context;     
+        private readonly static FactoryContext _context=new FactoryContext();     
         public static FactoryContext GetInstance()
         {
             return _context;
+        }
+        private FactoryContext()
+        {
+
         }
     }
 }

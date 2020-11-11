@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace csharp
 {
-    class IChat
+     public class IChat
     {
-        void Send();
+     //void Send();
     }
 }

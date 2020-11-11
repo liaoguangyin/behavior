@@ -1,4 +1,5 @@
-﻿using System;
+﻿using csharp;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,18 +10,17 @@ namespace selfstudy
     //注册/登录功能，定义一个User类，包含字段：Name（用户名）、Password（密码）和 邀请人（InvitedBy），和方法：Register()、Login()
     //让User类无法被继承
 
-    public sealed class User
+    public sealed class User : Entity
     {
         private string _Name;
-        private User()
-        {
-        }
-        public User(string name, string password)
+        public User(string name, string Password)
         {
             _Name = name;
-            _password = password;
+            _password = Password;
         }
-        public string name
+        public void Register(){}
+        public void Login() {}
+        public string Name
         {
             set
             {
@@ -45,8 +45,10 @@ namespace selfstudy
             private get;
         }
 
-        public User _invitedBy { get; set; }
-        public string _inviteCode { get; set; }
+        public User InvitedBy { get; set; }
+        public string InviteCode { get; set; }
         public string AuthCode { get; set; }
+       
+     
     }
 }

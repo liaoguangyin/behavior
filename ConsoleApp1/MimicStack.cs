@@ -14,17 +14,18 @@ namespace csharp
     public class MimicStack
     {
 
-        static int[] container;
-        public MimicStack(int length)
+        object[] element;
+        int top = 0;
+        const int bottom = 0;
+        public MimicStack(int size)
         {
-            container = new int[length];
+            element = new object[size];
         }
-        static int top = 0;
-        public static void Push(int element)
+        public void Push(object element)
         {
-            if (top <= container.Length - 1)
+            if (top <= this.element.Length - 1)
             {
-                container[top] = element;
+                this.element[top] = element;
                 top++;
             }
             else
@@ -32,12 +33,20 @@ namespace csharp
                 Console.WriteLine("栈溢出");
             }
         }
-        public static int Pop() 
+        public void Push(params object[] array)
         {
-            if (top!=0)
+            for (int i = 0; i < array.Length; i++)
+            {
+                Push(array[i]);
+            }
+
+        }
+        public object Pop() 
+        {
+            if (top !=bottom)
             {
                 top--;
-                return container[top];
+                return element[top];
             }
             else
             {
@@ -45,6 +54,10 @@ namespace csharp
                 return -1;
             }
         }
+        
+	
+
+	}
        
-    }
 }
+

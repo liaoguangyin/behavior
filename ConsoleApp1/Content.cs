@@ -1,4 +1,5 @@
-﻿using System;
+﻿using selfstudy;
+using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata;
 using System.Text;
@@ -35,10 +36,36 @@ namespace CSharplearn
         //继承自父类的属性和方法自己的属性和方法
         //再为之前所有类（含User、HelpMoney等）抽象一个基类：Entity，包含一个只读的Id属性。
         //试一试，Suggest能有Id属性么？
-        public virtual void Publish() 
-        { 
-        
-        }
+        public virtual void Publish()
+        {
 
+        }
     }
+
+    //public class Publish
+    //{
+    //   public class Problem : Publish
+    //    {
+    //        public virtual void Problem()
+    //        {
+    //            Console.WriteLine("不需要消耗帮帮币");
+    //        }
+    //    }
+          
+        
+    //}
+    //public class Suggest : Publish
+    //{
+    //    public override void Suggest()
+    //    {
+    //        Console.WriteLine("不需要消耗帮帮币");
+    //    }
+    //}
+    //public class Relese : Publish
+    //{
+    //    public override void Relese()
+    //    {
+    //        Console.WriteLine("需要消耗一个帮帮币");
+    //    }
+    //}
 }

@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CSharplearn;
+using System;
 
 namespace selfstudy
 {/*定义一个类Problem，包含字段：标题（Title）、正文（Body）、悬赏（Reward）、发布时间（PublishDateTime）和作者（Author），和方法Publish()*/
-    class Problem
+    class Problem:Content
     {
         private string _Title { get; set; }
         private string _Body { get; set; }
@@ -16,6 +15,7 @@ namespace selfstudy
         {
         }
         private int _reward;
+      
         public int _Reward 
         {
             get { return _reward; }
@@ -38,6 +38,13 @@ namespace selfstudy
         set { _keywords[index - 1] = value; }
         get { return _keywords[index - 1]; }
         }
+        //public override void Publish()
+        //{
+        //    _Author.HelpMoney -= _Reward;//发布减少帮帮比
+
+        //    _Reward--;//需要消耗其设置悬赏数量的帮帮币
+        //}
     }
-    
+ 
+
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace csharp
 {
-    
-    internal interface  IAppraise
+
+    internal interface IAppraise
     {
         void Agree();//赞
         void Disagree();//踩
