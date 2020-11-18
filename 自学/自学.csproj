@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>csharp.自学.自学.Tester</StartupObject>
+    <StartupObject>csharp.Program</StartupObject>
   </PropertyGroup>
 
 </Project>

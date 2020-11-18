@@ -44,6 +44,14 @@ namespace selfstudy
 
         //    _Reward--;//需要消耗其设置悬赏数量的帮帮币
         //}
+        public static void Load(int Id)//Load(int Id)：根据Id从数据库获取一条求助
+        {
+            Id++;
+        }
+        public static void Delete(int Id)//Delete(int Id)：根据Id删除某个求助
+        {
+            Id--;
+        }
     }
  
 

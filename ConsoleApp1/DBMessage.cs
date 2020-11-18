@@ -10,7 +10,7 @@ namespace csharp
         {
             Console.WriteLine(" DBMessage");
         }
-        public void send()
+        public void end()
         {
             throw new NotImplementedException();
         }
