@@ -21,13 +21,12 @@ namespace csharp
     {
         static void Main()
         {
-            Student lgy = new Student("廖光银");
+            Student lgy = new Student("555555");
         }
 
 
     }
 }
-
 
 
 
