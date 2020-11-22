@@ -28,6 +28,17 @@ namespace csharp
     }
 }
 
+namespace MyNamespace
+{
+    class MyClass
+    {
+        static void Main()
+        {
+            Student lgy = new Student("11111");
+        }
+    }
+}
+
 
 
 
