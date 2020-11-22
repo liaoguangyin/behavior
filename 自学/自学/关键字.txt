@@ -7,9 +7,5 @@
   private 使用小驼峰 每个单词都使用小写
   public 使用大驼峰 每个单词的首字母大写
   变量用小写
-  sealed（密封） 不能被继承的
+  sealed不能被继承的
   ctr构造器的简写
-  this 这个
-  readonly 只读
-  const 常量
-  Property 属性

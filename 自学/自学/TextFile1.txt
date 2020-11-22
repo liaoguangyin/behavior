@@ -34,12 +34,3 @@ new 一个类的时候实际上是调用了一个刚才new的那一个类的构�
 构造函数的（)里面代表的是参数{}中代表的是方法体
 构造函数和函数的不同有 构造函数没有返回 构造函数的名字一定是和类名一致的
 方法一定有返回 方法如果没有返回值就要给一个void
-当参数名和字段名相同时才加this区分 this就是当前对象
-const一旦声明，就要赋值；readonly可用延后到constructor 
-const只能是int/bool/string等基本类型；readonly可以是其他类型（如Teacher）
-const默认static，由类名直接调用；readonly默认是实例成员，由对象调用
-const还可用于方法体内修饰变量，readonly不行。
-const是在编译时完成赋值，而readonly是在运行时赋值
-常量一般都写成大写
-实例的可以直接.出来
-属性是对字段的封装
